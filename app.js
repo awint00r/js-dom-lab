@@ -11,3 +11,16 @@ const newItem = document.createElement('li');
 newItem.textContent = 'Newly added item';
 const itemList = document.getElementById('item-list');
 itemList.appendChild(newItem);
+
+const addItemBtn = document.getElementById('add-item-btn');
+addItemBtn.addEventListener('click', function() {
+    const newItem = document.createElement('li');
+    newItem.textContent = 'Another new item';
+    itemList.appendChild(newItem);
+});
+
+const highlightBtn = document.getElementById('highlight-title-btn');
+highlightBtn.addEventListener('click', function() {
+  mainTitle.classList.toggle('highlight');
+  console.log('Highlight button clicked');
+});

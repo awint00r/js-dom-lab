@@ -24,3 +24,10 @@ highlightBtn.addEventListener('click', function() {
   mainTitle.classList.toggle('highlight');
   console.log('Highlight button clicked');
 });
+
+function updateFooter() {
+    const footer = document.getElementById('footer-text');
+    const today = new Date().toLocaleDateString();
+    footer.textContent = `DOM Manipulation Lab © ${today}`;
+}
+updateFooter();

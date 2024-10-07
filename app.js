@@ -17,6 +17,7 @@ addItemBtn.addEventListener('click', function() {
     const newItem = document.createElement('li');
     newItem.textContent = 'Another new item';
     itemList.appendChild(newItem);
+    newItem.classList.add('newItem')
 });
 
 const highlightBtn = document.getElementById('highlight-title-btn');
@@ -31,3 +32,4 @@ function updateFooter() {
     footer.textContent = `DOM Manipulation Lab © ${today}`;
 }
 updateFooter();
+

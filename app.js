@@ -20,6 +20,14 @@ addItemBtn.addEventListener('click', function() {
     newItem.classList.add('newItem')
 });
 
+const RemoveItemBtn = document.getElementById('remove-item');
+RemoveItemBtn.addEventListener('click', function() {
+    const lastItem = itemList.lastElementChild;
+    if (lastItem) {
+        lastItem.remove();
+    }
+})
+
 const highlightBtn = document.getElementById('highlight-title-btn');
 highlightBtn.addEventListener('click', function() {
   mainTitle.classList.toggle('highlight');

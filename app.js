@@ -28,6 +28,20 @@ RemoveItemBtn.addEventListener('click', function() {
     }
 })
 
+const AddCustomItemBtn = document.getElementById('add-custom-item-btn');
+AddCustomItemBtn.addEventListener('click', function() {
+    const customItemInput = document.getElementById('custom-item-text');
+    const customItemText = customItemInput.value;
+    if (customItemText !== '') {
+    const customItem = document.createElement('li');
+    customItem.textContent = customItemText;
+    itemList.appendChild(customItem);
+    customItemInput.value = ''
+    } else {
+        alert ('Enter a value in the box')
+    }
+})
+
 const highlightBtn = document.getElementById('highlight-title-btn');
 highlightBtn.addEventListener('click', function() {
   mainTitle.classList.toggle('highlight');
